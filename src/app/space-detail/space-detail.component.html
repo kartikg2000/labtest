@@ -1,0 +1,28 @@
+<div *ngIf="dataItem?.length>=0">           
+    <div *ngFor='let x of dataItem'>
+     <Strong>Mission Name: </Strong>
+      {{x.mission_name}}
+      <br>
+      <Strong>Rocket Name: </Strong>
+      {{x.rocket.rocket_name}}
+      <br>
+      <Strong>Rocket Type: </Strong>
+      {{x.rocket.rocket_type}}
+      <br>
+      <Strong>Rocket Payload Type: </Strong>
+      {{x.payloads.payload_type}}
+      <br>
+      <Strong>Nationality: </Strong>
+      {{x.second_stage.payloads.nationality}}
+      <br>
+      <Strong>Details: </Strong>
+      {{x.details}}
+      <br>
+      <Strong>Site Name: </Strong>
+      {{x.launch_site}}
+      <br>
+      <Strong>Manufacturer: </Strong>
+      {{x.manufacturer}}
+      <br>
+      <br>
+    </div>

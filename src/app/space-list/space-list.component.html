@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+
+<ng-container *ngIf="dataItem?.length>=0">
+    <main>
+      <section class="container">
+        <mat-card
+          *ngFor="let x of dataItem"
+          [routerLink]="['/', x.id]"
+        >
+          <mat-card-header>
+            <mat-card-title><Strong>Mission Name: </Strong>{{ x.mission_name }}</mat-card-title>
+            <br/>
+            <mat-card-subtitle>
+                <Strong>Launch year:</Strong>
+                {{ x.launch_year }}
+                <br/>
+                <Strong>Flight Details:</Strong>
+                {{ x.details}}
+                <br/>
+                <Strong>More Info About Flight :</Strong>
+                {{ x.mission_patch_small}}
+                <br/>
+                <br/>
+            </mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </section>
+    </main>
+  </ng-container>
